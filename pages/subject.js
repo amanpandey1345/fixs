@@ -11,7 +11,7 @@ const subject = () => {
   const [createdBy, SetCreatedBy] = useState("");
   useEffect(() => {
     axios
-      .get("http://localhost:3000/api/databankApi/subject")
+      .get("https://fixs-v1zf.vercel.app/api/databankApi/subject")
       .then((response) => setGetQ(response.data.subject));
   }, [refs]);
 
@@ -34,7 +34,7 @@ const subject = () => {
       headers: { "Content-Type": "application/json" },
     };
     const { data } = await axios.post(
-      "http://localhost:3000/api/databankApi/subject/postSubject",
+      "https://fixs-v1zf.vercel.app/api/databankApi/subject/postSubject",
       {
         Subject: postsubj,
         CreatedBy: createdBy,
@@ -65,7 +65,7 @@ const subject = () => {
 
         
     const { data } = await axios.delete(
-        `http://localhost:3000/api/databankApi/subject/delete/${id}`
+        `https://fixs-v1zf.vercel.app/api/databankApi/subject/delete/${id}`
       );
 
       if(data.success === true){

@@ -60,7 +60,7 @@ const Home = () => {
       headers: { "Content-Type": "application/json" },
     };
     const { data } = await axios.post(
-      "http://localhost:3000/api/databankApi/dataBank",
+      "https://fixs-v1zf.vercel.app/api/databankApi/dataBank",
       {
         Ques: question,
         QuesImg: question,
@@ -105,7 +105,7 @@ const Home = () => {
   };
   useEffect(() => {
     axios
-      .get("http://localhost:3000/api/databankApi/GetDataBank")
+      .get("https://fixs-v1zf.vercel.app/api/databankApi/GetDataBank")
       .then((response) => setGetQ(response.data.getQuestion));
   }, [refs]);
 
@@ -113,7 +113,7 @@ const Home = () => {
     // e.preventDefault();
 
     const { data } = await axios.get(
-      "http://localhost:3000/api/databankApi/subject"
+      "https://fixs-v1zf.vercel.app/api/databankApi/subject"
     );
 
     SetSub(data.subject);
@@ -125,7 +125,7 @@ const Home = () => {
 
   const handleDeleteQues = async (id) => {
     const { data } = await axios.delete(
-      `http://localhost:3000/api/databankApi/delete/${id}`
+      `https://fixs-v1zf.vercel.app/api/databankApi/delete/${id}`
     );
 
     if (data.success === true) {
@@ -146,7 +146,7 @@ const Home = () => {
   useEffect(() => {
     const hello = async () => {
       const { data } = await axios.get(
-        "http://localhost:3000/api/databankApi/GetDataBank"
+        "https://fixs-v1zf.vercel.app/api/databankApi/GetDataBank"
       );
 
       setGetQ(data.getQuestion);
@@ -161,7 +161,7 @@ const Home = () => {
       // e.preventDefault();
   
       const { data } = await axios.get(
-        `http://localhost:3000/api/databankApi/chapter/${subjtype}`
+        `https://fixs-v1zf.vercel.app/api/databankApi/chapter/${subjtype}`
       );
   
       SetChap(data.chapter);
@@ -178,7 +178,7 @@ const Home = () => {
       // e.preventDefault();
   
       const { data } = await axios.get(
-        `http://localhost:3000/api/databankApi/topic/${chaptype}`
+        `https://fixs-v1zf.vercel.app/api/databankApi/topic/${chaptype}`
       );
   
       SetTop(data.topic);

@@ -18,7 +18,7 @@ const topic = () => {
     useEffect(() => {
     
         axios
-          .get("http://localhost:3000/api/databankApi/topic")
+          .get("https://fixs-v1zf.vercel.app/api/databankApi/topic")
           .then((response) => setGetQ(response.data.topic));
     
       }, [refs]);
@@ -34,7 +34,7 @@ const topic = () => {
         // e.preventDefault();
     
         const { data } = await axios.get(
-          `http://localhost:3000/api/databankApi/chapter/${subjtype}`
+          `https://fixs-v1zf.vercel.app/api/databankApi/chapter/${subjtype}`
         );
     
         SetChap(data.chapter );
@@ -45,7 +45,7 @@ const topic = () => {
         // e.preventDefault();
     
         const { data } = await axios.get(
-          "http://localhost:3000/api/databankApi/subject"
+          "https://fixs-v1zf.vercel.app/api/databankApi/subject"
         );
     
         SetSub(data.subject );
@@ -73,7 +73,7 @@ const topic = () => {
             headers: { "Content-Type": "application/json" },
           };
           const { data } = await axios.post(
-            "http://localhost:3000/api/databankApi/topic/postTopic",
+            "https://fixs-v1zf.vercel.app/api/databankApi/topic/postTopic",
             {
               SubjectId: subjtype,
               ChapterId:chaptype,
@@ -105,7 +105,7 @@ const topic = () => {
 
         
         const { data } = await axios.delete(
-            `http://localhost:3000/api/databankApi/topic/delete/${id}`
+            `https://fixs-v1zf.vercel.app/api/databankApi/topic/delete/${id}`
           );
 
           if(data.success === true){

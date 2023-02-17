@@ -21,7 +21,7 @@ const chapter = () => {
   const [refs, SetRefs] = useState(false);
   useEffect(() => {
     axios
-      .get("http://localhost:3000/api/databankApi/chapter")
+      .get("https://fixs-v1zf.vercel.app/api/databankApi/chapter")
       .then((response) => setGetQ(response.data.chapter));
   }, [refs]);
 
@@ -33,7 +33,7 @@ const chapter = () => {
     // e.preventDefault();
 
     const { data } = await axios.get(
-      "http://localhost:3000/api/databankApi/subject"
+      "https://fixs-v1zf.vercel.app/api/databankApi/subject"
     );
 
     SetSub(data.subject);
@@ -60,7 +60,7 @@ const chapter = () => {
       headers: { "Content-Type": "application/json" },
     };
     const { data } = await axios.post(
-      "http://localhost:3000/api/databankApi/chapter/postChapter",
+      "https://fixs-v1zf.vercel.app/api/databankApi/chapter/postChapter",
       {
         SubjectId: subjtype,
         Chapter: postchap,
@@ -87,7 +87,7 @@ const chapter = () => {
   };
   const handleDeletechap = async (id) => {
     const { data } = await axios.delete(
-      `http://localhost:3000/api/databankApi/chapter/delete/${id}`
+      `https://fixs-v1zf.vercel.app/api/databankApi/chapter/delete/${id}`
     );
 
     if (data.success === true) {
