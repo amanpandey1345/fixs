@@ -296,7 +296,7 @@ const Home = () => {
               onChange={(e) => setOption4(e.target.value)}
             />
             <FormControl className="w-full md:w-48">
-              <InputLabel id="demo-simple-select-label">Subject</InputLabel>
+              <InputLabel id="demo-simple-select-label">Answer</InputLabel>
               <Select
                 labelId="demo-simple-select-label"
                 id="demo-simple-select"
