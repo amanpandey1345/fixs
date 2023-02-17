@@ -163,6 +163,7 @@ const chapter = () => {
           className="bg-green-600 hover:bg-yellow-600"
           variant="contained"
           type="submit"
+          color='success'
           onClick={(e) => handleCreatechap(e)}
         >
           Submit
@@ -182,6 +183,7 @@ const chapter = () => {
                     className="bg-red-600 hover:bg-yellow-600 "
                     variant="contained"
                     type="submit"
+                    color='error'
                     onClick={(e) => handleDeletechap(el.ChapterId)}
                   >
                     Delete

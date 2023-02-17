@@ -342,6 +342,7 @@ const Home = () => {
             className="bg-green-600 hover:bg-yellow-600"
             variant="contained"
             type="submit"
+            color='success'
             onClick={(e) => handleCreate(e)}
           >
             Submit

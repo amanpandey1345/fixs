@@ -199,7 +199,7 @@ const topic = () => {
             className="bg-green-600 hover:bg-yellow-600"
             variant="contained"
             type="submit"
-
+            color='success'
             onClick={(e) => handleCreatetop(e)} 
           >
             Submit
@@ -213,6 +213,7 @@ const topic = () => {
             className="bg-red-600 hover:bg-yellow-600 "
             variant="contained"
             type="submit"
+            color='error'
             
             onClick={(e) => handleDeletetop(el.TopicId)} 
             >

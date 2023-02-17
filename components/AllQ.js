@@ -34,6 +34,7 @@ const AllQ = ({ data,func }) => {
             className="bg-red-600 hover:bg-yellow-600 "
             variant="contained"
             type="submit"
+            color='error'
             
             onClick={(e) => func(el.QuesId)} 
             >
